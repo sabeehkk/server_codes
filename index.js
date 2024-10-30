@@ -22,7 +22,7 @@ app.post('/contact', async (req, res) => {
         service: 'gmail',
         auth: {
             user: 'mail@defencehousingsociety.com',
-            pass: 'goya wito mhbf awpc',
+            pass: 'goya wito mhbf awpc', 
         },
     });
 
