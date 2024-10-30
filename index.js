@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
  
 app.post('/contact', async (req, res) => {
-    const { name, email, phoneno, message } = req.body;
+    const { firstName,lastName, email, phoneno, message } = req.body;
     
     // Check if the incoming data is captured correctly
     console.log(req.body, 'Incoming data');
@@ -29,11 +29,11 @@ app.post('/contact', async (req, res) => {
     const mailOptions = {
         from: 'your-email@gmail.com',
         to:"mail@defencehousingsociety.com" ,
-        subject: `New Contact Request from ${name}`,
+        subject: `New Contact Request from ${firstName}`,
         html: `
             <div style="font-family: Arial, sans-serif; line-height: 1.6;">
                 <h2 style="color: #333;">New Contact Request</h2>
-                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Name:</strong> ${firstName}</p>
                 <p><strong>Email:</strong> ${email}</p>
                 <p><strong>Phone:</strong> ${phoneno}</p>
                 <h3 style="color: #555;">Message:</h3>
