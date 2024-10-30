@@ -28,7 +28,7 @@ app.post('/contact', async (req, res) => {
 
     const mailOptions = {
         from: 'your-email@gmail.com',
-        to: email,
+        to:"mail@defencehousingsociety.com" ,
         subject: `New Contact Request from ${name}`,
         html: `
             <div style="font-family: Arial, sans-serif; line-height: 1.6;">
