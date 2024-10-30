@@ -29,11 +29,11 @@ app.post('/contact', async (req, res) => {
     const mailOptions = {
         from: 'your-email@gmail.com',
         to:"mail@defencehousingsociety.com" ,
-        subject: `New Contact Request from ${firstName}`,
+        subject: `New Contact Request from ${firstName, lastName}`,
         html: `
             <div style="font-family: Arial, sans-serif; line-height: 1.6;">
                 <h2 style="color: #333;">New Contact Request</h2>
-                <p><strong>Name:</strong> ${firstName}</p>
+                <p><strong>Name:</strong> ${firstName, lastName}</p>
                 <p><strong>Email:</strong> ${email}</p>
                 <p><strong>Phone:</strong> ${phoneno}</p>
                 <h3 style="color: #555;">Message:</h3>
